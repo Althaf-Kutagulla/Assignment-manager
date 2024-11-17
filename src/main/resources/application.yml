@@ -1,0 +1,12 @@
+spring:
+  application:
+   name:AssignmentManager
+  data:
+      mongodb:
+        uri: mongodb://localhost:27017/assignmentManagerDB
+  app:
+      jwtSecret: uakNJ3zJ3W4pbzriFZ6rqcmkGnAMJ2CfRIPWhgByFV3tgEKn3uSH4j5d18sySV3RBklWW1vW3ZUY7e4HgXdleA==
+
+      jwtExpirationMs: 172800000
+server:
+  port: 9090
