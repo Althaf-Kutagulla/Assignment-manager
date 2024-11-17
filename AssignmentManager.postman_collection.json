@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "6fa6feb1-4eb0-43c0-b533-306ca106b132",
+		"name": "AssignmentManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31776193"
+	},
+	"item": [
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"12345\",\r\n  \"task\": \"Complete API integration\",\r\n  \"admin\": \"admin\",\r\n  \"status\": \"PENDING\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/v1/assignments/create"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ASSIGNMENT BY ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHRoYWYiLCJpYXQiOjE3MzE4MTk4MjcsImV4cCI6MTczMTk5MjYyN30.0tTa0JkzFPdEFajEvh2rbtADMi6684h2WPIQ9ByvKO4pLUU8gv-yzuj_NO6Pq-SGNs8K0KHeQrfbCkwpSgsS_A"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9090/api/v1/assignments"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ASSIGNMENTS",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbHRoYWYiLCJpYXQiOjE3MzE4MTk4MjcsImV4cCI6MTczMTk5MjYyN30.0tTa0JkzFPdEFajEvh2rbtADMi6684h2WPIQ9ByvKO4pLUU8gv-yzuj_NO6Pq-SGNs8K0KHeQrfbCkwpSgsS_A"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9090/api/v1/assignments"
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Mohammad\",\r\n  \"lastName\": \"Jamsheed\",\r\n  \"userId\": \"admin\",\r\n  \"password\": \"password123\",\r\n  \"role\": \"ADMIN\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/auth/public/signup"
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"althaf\",\r\n  \"password\": \"SecureP@ssw0rd!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:9090/api/auth/public/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "admins",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJraXJhbiIsImlhdCI6MTczMTgzOTMzNSwiZXhwIjoxNzMyMDEyMTM1fQ.p91XGHpybLaGJoKFzP7QGNglb_WyJuA4H3E8XAfycAMD9LFjgbsf5TQdlPLLP13tEvuPb3rxUQkyskSFfgYRWg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:9090/admins"
+			},
+			"response": []
+		},
+		{
+			"name": "ACCEPT ASSIGNMENT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKYW1zaGVlZCIsImlhdCI6MTczMTg0Mjk5MCwiZXhwIjoxNzMyMDE1NzkwfQ.GpW-CuNRwVGPbjx2w2LsYtgtRI9xZ-NZJLSeN6n5sPyS1DIJK4klTja7r5EF7k_hvD9M3xHVLkYye8HyTDnOyQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:9090/assignments/6739d238a1e3cc41fd716180/accept"
+			},
+			"response": []
+		},
+		{
+			"name": "REJECT ASSIGNMENT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJKYW1zaGVlZCIsImlhdCI6MTczMTg0Mjk5MCwiZXhwIjoxNzMyMDE1NzkwfQ.GpW-CuNRwVGPbjx2w2LsYtgtRI9xZ-NZJLSeN6n5sPyS1DIJK4klTja7r5EF7k_hvD9M3xHVLkYye8HyTDnOyQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:9090/assignments/6739d238a1e3cc41fd716180/reject"
+			},
+			"response": []
+		}
+	]
+}
